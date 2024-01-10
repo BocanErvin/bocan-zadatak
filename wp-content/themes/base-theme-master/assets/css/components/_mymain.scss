@@ -1,0 +1,454 @@
+@import "standards";
+.hero-background{
+   background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/banner-background.png);
+   display:flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   padding-bottom: 82.22px;
+}
+.hero-txt{
+    width: 473px;
+    height: 312px;
+
+}
+.hero-txt-h2{
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 42px;
+    color: white;
+
+}
+.hero-txt-p{
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 27.28px;
+}
+.hero-txt-button{
+    
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    width: 185px;
+    height: 50px;
+    padding-top: 13px;
+    padding-right: 34px;
+    padding-left: 33px;
+}
+.hero-img{
+    width: 534.78px;
+    height: 498.78px;
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/service-icon.png);
+    margin-left: 162.03px;
+
+}
+
+
+.services-posts-cards{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+ 
+
+}
+.services-post-card{
+    height: 280px;
+    width: 295px;
+     text-align: left;
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.10);
+    border-radius: 5px;
+    gap:10px;
+    padding-left: 30px;
+    border-top: 15px solid $blueColor;
+    
+}
+.services-post-card:hover{
+    background-color: $blueColor;
+    color: white;
+
+}
+.services-post-title{
+    font-family: $primaryFont;
+    width: 139px;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+
+
+}
+.services-post-txt{
+    font-family: $primaryFont;
+    width: 187px;
+    height: 63px;
+    opacity: 60%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.services-post-link{
+    font-family: $primaryFont;
+    width: 89px;
+    height: 21px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.services-info{
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.info{
+    font-family: $primaryFont;
+    width: 295px;
+    text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.info-h5{
+    font-family: $primaryFont;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+
+}
+.info-p{
+    font-family: $primaryFont;
+font-size: 14px;
+font-weight: 500;
+line-height: 21px;
+}
+
+
+
+
+.about-background{
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/about-us.png);
+    width: 582px;
+    height: 478px;
+    border-radius: 5px;
+}
+.about{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+}
+.h2-about{
+    width: 324.81px;
+    height: 84px;
+    top: 102px;
+
+}
+.about-txt{
+    width: 610px;
+    height: 354px;
+
+}
+.about-txt-p{
+    opacity: 60%;
+}
+.list-about{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 20px;
+    width: 571.521px;
+    margin-top: 30px;
+}
+//RAZMAK IZMEDJU DVEJU LISTA MI SE NE SVIDJA
+.list-txt{
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+}
+
+
+
+
+
+.our-work{
+    text-align: center;
+    justify-self: center;
+}
+.our-work-main{
+    display:flex ;
+    justify-content: space-evenly;
+}
+.our-button{
+    border-radius: 5px;
+    width: 85px;
+    height: 300px;
+    background: #FFF;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.10);
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    color: $blueColor;
+
+}
+.button-txt{
+    display: flex;
+    font-family: $primaryFont;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-left: 25px;
+    justify-content: center;
+    margin-right: 25px;
+}
+
+.our-button:hover{
+border: 2px solid $blueColor;
+}
+
+.our-txt{
+    width: 925px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ourwork-img{
+    width: 295px;
+    height: 300px;
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/findout-more.png);
+}
+.ourwork-txt{
+    width: 610px;
+    align-self: center;
+    
+}
+.ourwork-h4{
+    font-family: $primaryFont;
+    font-size: 24px;
+    font-weight: 400;
+}
+.ourwork-p{
+    opacity: 60%;
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 400;
+}
+.button2{
+    font-family: $primaryFont;
+    font-size: 14px;
+    width: 184px;
+    height: 51px;
+    color: #FFF;
+    background-color: $blueColor;
+}
+
+
+
+.testimonial-clients{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.testimonial-card{
+    width: 400px;
+    height: 400px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: #FFF;
+        box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.10);
+}
+.tst-card-txt{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    align-content: space-evenly;
+    gap: 10px;
+    height: 499px;
+    padding-top:60px;
+}
+.stars{
+    margin-bottom: 30px;
+}
+.tst-name{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial-txt-p{
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 400;
+}
+.testimonial-name{
+    font-family: $primaryFont;
+    font-size: 16px;
+    font-weight: 600;
+}
+.testimonial-job{
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+
+
+.img{
+    width: 295px;
+    height: 180px;
+    border-radius: 5px;
+}
+.img1{   
+  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project1.png);
+}
+.img2{
+  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project2.png);
+}
+.img3{
+  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project3.png);
+}
+.img4{
+  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project4.png);
+}
+.project-images{
+    width: 610px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project-txt
+{
+    width: 398px;
+    height: 385px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+.project{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 199px;
+}
+.projects-h5{
+    font-family: $primaryFont;
+    font-size: 20px;
+    font-weight: 400;
+    color: $blueColor;
+}
+.projects-h3{
+    font-family: $primaryFont;
+    font-size: 28px;
+    font-weight: 700;
+}
+.projects-p{
+    font-family: $primaryFont;
+    font-size: 14px;
+    font-weight: 400;
+}
+.projects-button{
+    width: 214px;
+    height: 51px;
+}
+
+
+
+
+
+.team-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px;
+    
+}
+.team-card{
+    width: 400px;
+    height: 500px;
+    border-radius: 5px;
+   gap: 30px;
+   box-shadow: 0px 0px 18px 0px #0000001A;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-evenly;
+}
+.team-card:hover{
+    border: 2px solid $blueColor;
+}
+.team1{
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim.png);
+    width: 380px;
+    height: 250px;
+    border-radius: 5px;
+
+}
+.team2{
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim2.png);
+    width: 380px;
+    height: 250px;
+    border-radius: 5px;
+}
+.team3{
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim-but-woman.png);
+    width: 380px;
+    height: 250px;
+    border-radius: 5px;
+}
+.social{
+    width: 250px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 65px;
+
+}
+.social-img{
+    width: 50px;
+height: 50px;
+
+}
+.name{
+    width: 185px;
+height: 65px;
+text-align: center;
+
+}
+.name-p{
+    font-family: $primaryFont;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+text-align: center;
+
+}
+.name-h4{
+    font-family:$primaryFont;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+text-align: left;
+
+}
