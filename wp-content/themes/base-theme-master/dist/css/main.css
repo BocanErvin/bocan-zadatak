@@ -1779,6 +1779,19 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   margin-bottom: 40px;
 }
 
+@media (width <= 1199px) {
+  .section-title {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (width <= 589px) {
+  .section-title {
+    margin-top: 20px;
+  }
+}
+
 .section-title-h5 {
   color: #132577;
   font-family: Poppins, sans-serif;
@@ -1796,7 +1809,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 
 .hero-background {
   background-image: url("http://localhost/bocan-zadatak/wp-content/uploads/2024/01/banner-background.png");
-  flex-direction: row;
+  flex-flow: wrap-reverse;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -1807,6 +1820,14 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 .hero-txt {
   width: 473px;
   height: 312px;
+}
+
+@media (width <= 528px) {
+  .hero-txt {
+    width: 310px;
+    height: 400px;
+    margin-top: -100px;
+  }
 }
 
 .hero-txt-h2 {
@@ -1841,6 +1862,27 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   margin-left: 162.03px;
 }
 
+@media (width <= 1199px) {
+  .hero-img {
+    margin-left: 0;
+  }
+}
+
+@media (width <= 528px) {
+  .hero-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330px;
+    margin-top: -100px;
+  }
+}
+
+.services-cards {
+  flex-direction: column;
+  justify-content: space-evenly;
+  display: flex;
+}
+
 .services-posts-cards {
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -1858,18 +1900,26 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   box-shadow: 0 4px 13px #0000001a;
 }
 
+@media (width <= 1199px) {
+  .services-post-card {
+    margin-top: 20px;
+  }
+}
+
 .services-post-card:hover {
   color: #fff;
   background-color: #132577;
 }
 
 .services-post-title {
-  width: 139px;
-  height: 60px;
   font-family: Poppins, sans-serif;
   font-size: 20px;
   font-weight: 600;
   line-height: 30px;
+}
+
+.first-post-title {
+  width: 138px;
 }
 
 .services-post-txt {
@@ -1933,6 +1983,20 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   height: 478px;
 }
 
+@media (width <= 610px) {
+  .about-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330px;
+  }
+}
+
+@media (width <= 462px) {
+  .about-background {
+    margin-top: 100px;
+  }
+}
+
 .about {
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -1941,15 +2005,41 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   display: flex;
 }
 
+@media (width <= 1199px) {
+  .about {
+    margin-top: 140px;
+  }
+}
+
+@media (width <= 589px) {
+  .about {
+    margin-top: 370px;
+  }
+}
+
 .h2-about {
   width: 324.81px;
   height: 84px;
   top: 102px;
 }
 
+@media (width <= 1199px) {
+  .h2-about {
+    text-align: center;
+    width: auto;
+  }
+}
+
 .about-txt {
-  width: 610px;
+  max-width: 610px;
   height: 354px;
+}
+
+@media (width <= 1199px) {
+  .about-txt {
+    text-align: center;
+    width: auto;
+  }
 }
 
 .about-txt-p {
@@ -1963,7 +2053,15 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   gap: 20px;
   width: 571.521px;
   margin-top: 30px;
+  margin-left: 20px;
   display: flex;
+}
+
+@media (width <= 1199px) {
+  .list-about {
+    justify-content: center;
+    width: auto;
+  }
 }
 
 .list-txt {
@@ -1979,6 +2077,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 .our-work-main {
+  flex-wrap: wrap;
   justify-content: space-evenly;
   display: flex;
 }
@@ -1994,16 +2093,28 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   box-shadow: 0 0 18px #0000001a;
 }
 
+@media (width <= 1199px) {
+  .our-button {
+    writing-mode: horizontal-tb;
+    width: 300px;
+    height: 85px;
+    transform: rotate(0);
+  }
+}
+
+@media (width <= 599px) {
+  .our-button-3 {
+    margin-top: 20px;
+  }
+}
+
 .button-txt {
-  text-transform: capitalize;
   justify-content: center;
   margin-left: 25px;
   margin-right: 25px;
   font-family: Poppins, sans-serif;
   font-size: 24px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
   display: flex;
 }
 
@@ -2015,8 +2126,18 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 925px;
-  height: 300px;
+  height: auto;
   display: flex;
+}
+
+@media (width <= 1199px) {
+  .our-txt {
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
 }
 
 .ourwork-img {
@@ -2028,6 +2149,18 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 .ourwork-txt {
   align-self: center;
   width: 610px;
+}
+
+@media (width <= 1199px) {
+  .ourwork-txt {
+    margin-left: 20px;
+  }
+}
+
+@media (width <= 640px) {
+  .ourwork-txt {
+    width: auto;
+  }
 }
 
 .ourwork-h4 {
@@ -2052,6 +2185,12 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-size: 14px;
 }
 
+@media (width <= 1199px) {
+  .button2 {
+    place-self: center;
+  }
+}
+
 .testimonial-clients {
   flex-wrap: wrap;
   place-content: center space-evenly;
@@ -2062,10 +2201,29 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 .testimonial-card {
   background: #fff;
   border-radius: 5px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   width: 400px;
   height: 400px;
   box-shadow: 0 0 18px #0000001a;
+}
+
+@media (width <= 599px) {
+  .testimonial-card {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (width <= 1199px) {
+  .tst-3 {
+    margin-top: 120px;
+  }
+}
+
+@media (width <= 799px) {
+  .tst-2 {
+    margin-top: 120px;
+  }
 }
 
 .tst-card-txt {
@@ -2139,6 +2297,12 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   display: flex;
 }
 
+@media (width <= 610px) {
+  .project-images {
+    justify-content: center;
+  }
+}
+
 .project-txt {
   flex-direction: column;
   justify-content: space-evenly;
@@ -2155,11 +2319,25 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   display: flex;
 }
 
+@media (width <= 430px) {
+  .project {
+    justify-content: center;
+    align-items: center;
+    width: 340px;
+  }
+}
+
 .projects-h5 {
   color: #132577;
   font-family: Poppins, sans-serif;
   font-size: 20px;
   font-weight: 400;
+}
+
+@media (width <= 991px) {
+  .projects-h5 {
+    text-align: center;
+  }
 }
 
 .projects-h3 {
@@ -2168,15 +2346,33 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   font-weight: 700;
 }
 
+@media (width <= 991px) {
+  .projects-h3 {
+    text-align: center;
+  }
+}
+
 .projects-p {
   font-family: Poppins, sans-serif;
   font-size: 14px;
   font-weight: 400;
 }
 
+@media (width <= 991px) {
+  .projects-p {
+    text-align: center;
+  }
+}
+
 .projects-button {
   width: 214px;
   height: 51px;
+}
+
+@media (width <= 991px) {
+  .projects-button {
+    text-align: center;
+  }
 }
 
 .team-cards {
@@ -2198,6 +2394,18 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   box-shadow: 0 0 18px #0000001a;
 }
 
+@media (width <= 417px) {
+  .team-card {
+    width: 350px;
+  }
+}
+
+@media (width <= 380px) {
+  .team-card {
+    width: 340px;
+  }
+}
+
 .team-card:hover {
   border: 2px solid #132577;
 }
@@ -2209,6 +2417,14 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   height: 250px;
 }
 
+@media (width <= 417px) {
+  .team1 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330px;
+  }
+}
+
 .team2 {
   background-image: url("http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim2.png");
   border-radius: 5px;
@@ -2216,11 +2432,27 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   height: 250px;
 }
 
+@media (width <= 417px) {
+  .team2 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330px;
+  }
+}
+
 .team3 {
   background-image: url("http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim-but-woman.png");
   border-radius: 5px;
   width: 380px;
   height: 250px;
+}
+
+@media (width <= 417px) {
+  .team3 {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 330px;
+  }
 }
 
 .social {

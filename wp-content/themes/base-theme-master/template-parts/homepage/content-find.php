@@ -15,5 +15,5 @@
             
         </div>
         <div class="our-button"><h4 class="button-txt">Our Company</h4></div>
-        <div class="our-button"><h4 class="button-txt">Our Customer</h4></div>
+        <div class="our-button our-button-3"><h4 class="button-txt">Our Customer</h4></div>
     </div>

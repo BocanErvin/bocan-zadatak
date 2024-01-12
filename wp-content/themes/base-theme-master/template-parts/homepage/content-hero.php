@@ -1,5 +1,5 @@
 
-    <div class="hero-background background">
+    <div class="hero-background background hero-main">
         <div class="hero-txt">
           <h2 class="hero-txt-h2">Software solution providers that
 help brands thrive and stand out</h2>

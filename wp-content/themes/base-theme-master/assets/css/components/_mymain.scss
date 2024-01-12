@@ -1,33 +1,43 @@
 @import "standards";
-.hero-background{
-   background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/banner-background.png);
-   display:flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-   gap: 10px;
-   padding-bottom: 82.22px;
+
+.hero-background {
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/banner-background.png);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 82.22px;
+    flex-wrap: wrap-reverse;
+   
 }
-.hero-txt{
+.hero-txt {
     width: 473px;
     height: 312px;
-
+    @include max-mq(528px) {
+         width:310px;
+         margin-top: -100px;
+         height: 400px;
+       }
 }
-.hero-txt-h2{
+
+.hero-txt-h2 {
     font-size: 28px;
     font-weight: 600;
     line-height: 42px;
     color: white;
 
 }
-.hero-txt-p{
+
+.hero-txt-p {
     color: white;
     font-size: 16px;
     font-weight: 400;
     line-height: 27.28px;
 }
-.hero-txt-button{
-    
+
+.hero-txt-button {
+
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -37,49 +47,74 @@
     padding-right: 34px;
     padding-left: 33px;
 }
-.hero-img{
+
+.hero-img {
     width: 534.78px;
     height: 498.78px;
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/service-icon.png);
     margin-left: 162.03px;
+    @include max-mq(map-get($breakpoints, "lg")) {
+        margin-left: 0;
+
+    }
+    @include max-mq(528px) {
+        background-size: 330px;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-top: -100px;
+       }
 
 }
 
 
-.services-posts-cards{
+.services-cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+}
+
+.services-posts-cards {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
- 
+
 
 }
-.services-post-card{
+
+.services-post-card {
     height: 280px;
     width: 295px;
-     text-align: left;
+    text-align: left;
     box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.10);
     border-radius: 5px;
-    gap:10px;
+    gap: 10px;
     padding-left: 30px;
     border-top: 15px solid $blueColor;
-    
+    @include max-mq(map-get($breakpoints, "lg")) {
+        margin-top: 20px;
+
+    }
 }
-.services-post-card:hover{
+
+.services-post-card:hover {
     background-color: $blueColor;
     color: white;
 
 }
-.services-post-title{
+
+.services-post-title {
     font-family: $primaryFont;
-    width: 139px;
-    height: 60px;
     font-size: 20px;
     font-weight: 600;
     line-height: 30px;
-
-
 }
-.services-post-txt{
+.first-post-title{
+    width:138px;
+}
+
+
+.services-post-txt {
     font-family: $primaryFont;
     width: 187px;
     height: 63px;
@@ -90,7 +125,8 @@
     letter-spacing: 0em;
     text-align: left;
 }
-.services-post-link{
+
+.services-post-link {
     font-family: $primaryFont;
     width: 89px;
     height: 21px;
@@ -99,7 +135,7 @@
     line-height: 21px;
 }
 
-.services-info{
+.services-info {
     height: 100px;
     display: flex;
     flex-wrap: wrap;
@@ -107,60 +143,95 @@
     margin-top: 100px;
     margin-bottom: 100px;
 }
-.info{
+
+
+.info {
     font-family: $primaryFont;
     width: 295px;
     text-align: center;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.info-h5{
+
+.info-h5 {
     font-family: $primaryFont;
-font-size: 24px;
-font-weight: 600;
-line-height: 36px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
 
 }
-.info-p{
+
+.info-p {
     font-family: $primaryFont;
-font-size: 14px;
-font-weight: 500;
-line-height: 21px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
 }
 
 
 
 
-.about-background{
+.about-background {
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/about-us.png);
     width: 582px;
     height: 478px;
     border-radius: 5px;
+    @include max-mq(610px) {
+        background-size: 330px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+       @include max-mq(462px) {
+        margin-top:100px;
+       }
+    
 }
-.about{
+
+.about {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     gap: 48px;
+    @include max-mq(map-get($breakpoints, "lg")) {
+        margin-top: 140px;
+      }
+      @include max-mq(589px) {
+       margin-top:370px;
+        
+      }
+     
 }
-.h2-about{
+
+.h2-about {
     width: 324.81px;
     height: 84px;
     top: 102px;
-
+    @include max-mq(map-get($breakpoints, "lg")) {
+        text-align: center;
+        width: auto;
+      }
 }
-.about-txt{
-    width: 610px;
+
+.about-txt {
+    max-width: 610px;
     height: 354px;
+    @include max-mq(map-get($breakpoints, "lg")) {
+        text-align: center;
+        width: auto;
+      }
+    
+      
 
 }
-.about-txt-p{
+
+.about-txt-p {
     opacity: 60%;
 }
-.list-about{
+
+.list-about {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -168,9 +239,16 @@ line-height: 21px;
     gap: 20px;
     width: 571.521px;
     margin-top: 30px;
+    margin-left: 20px;
+    @include max-mq(map-get($breakpoints, "lg")) {
+        justify-content: center;
+        width: auto;
+      }
+      
 }
+
 //RAZMAK IZMEDJU DVEJU LISTA MI SE NE SVIDJA
-.list-txt{
+.list-txt {
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 500;
@@ -181,15 +259,18 @@ line-height: 21px;
 
 
 
-.our-work{
+.our-work {
     text-align: center;
     justify-self: center;
 }
-.our-work-main{
-    display:flex ;
+
+.our-work-main {
+    display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
-.our-button{
+
+.our-button {
     border-radius: 5px;
     width: 85px;
     height: 300px;
@@ -198,80 +279,137 @@ line-height: 21px;
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     color: $blueColor;
-
+    @include max-mq(map-get($breakpoints, "lg")) {
+        transform: rotate(0deg);
+        writing-mode: horizontal-tb;
+        width: 300px;
+        height: 85px;
+            
+          }
+   
+   
 }
-.button-txt{
+.our-button-3{
+    @include max-mq(599px) {
+       margin-top: 20px;
+      }
+}
+
+.button-txt {
     display: flex;
     font-family: $primaryFont;
     font-size: 24px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    text-transform: capitalize;
     margin-left: 25px;
     justify-content: center;
     margin-right: 25px;
+    
+   
 }
 
-.our-button:hover{
-border: 2px solid $blueColor;
+.our-button:hover {
+    border: 2px solid $blueColor;
 }
 
-.our-txt{
+.our-txt {
     width: 925px;
-    height: 300px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @include max-mq(map-get($breakpoints, "lg")) {
+        width:auto;
+        margin-top:20px;
+        margin-bottom:20px;
+        justify-content: center;
+        text-align: center;
+          }
+        
+         
+    
 }
-.ourwork-img{
+
+.ourwork-img {
     width: 295px;
     height: 300px;
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/findout-more.png);
 }
-.ourwork-txt{
+
+.ourwork-txt {
     width: 610px;
     align-self: center;
-    
+    @include max-mq(map-get($breakpoints, "lg")) {
+        margin-left:20px;
+      }
+      @include max-mq(640px) {
+       width: auto;
+        
+      }
+
 }
-.ourwork-h4{
+
+.ourwork-h4 {
     font-family: $primaryFont;
     font-size: 24px;
     font-weight: 400;
 }
-.ourwork-p{
+
+.ourwork-p {
     opacity: 60%;
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 400;
 }
-.button2{
+
+.button2 {
     font-family: $primaryFont;
     font-size: 14px;
     width: 184px;
     height: 51px;
     color: #FFF;
     background-color: $blueColor;
+    @include max-mq(map-get($breakpoints, "lg")) {
+        align-self: center;
+        justify-self: center;
+      }
 }
 
 
 
-.testimonial-clients{
-    display:flex;
+.testimonial-clients {
+    display: flex;
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
 }
-.testimonial-card{
+
+.testimonial-card {
     width: 400px;
     height: 400px;
-    flex-shrink: 0;
+    flex-shrink: 1;
     border-radius: 5px;
     background: #FFF;
-        box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.10);
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.10);
+    @include max-mq(599px) {
+        width: 300px;
+        margin-bottom:20px;
+       }
+    
 }
-.tst-card-txt{
+.tst-3{
+    @include max-mq(map-get($breakpoints, "lg")) {
+        
+        margin-top:120px;
+      }
+}
+.tst-2{
+    @include max-mq(799px) {
+       margin-top:120px;
+        
+      }
+}
+.tst-card-txt {
     z-index: 1;
     display: flex;
     flex-direction: column;
@@ -280,29 +418,36 @@ border: 2px solid $blueColor;
     align-content: space-evenly;
     gap: 10px;
     height: 499px;
-    padding-top:60px;
+    padding-top: 60px;
+    
+   
 }
-.stars{
+
+.stars {
     margin-bottom: 30px;
 }
-.tst-name{
+
+.tst-name {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     justify-content: center;
     align-items: center;
 }
-.testimonial-txt-p{
+
+.testimonial-txt-p {
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 400;
 }
-.testimonial-name{
+
+.testimonial-name {
     font-family: $primaryFont;
     font-size: 16px;
     font-weight: 600;
 }
-.testimonial-job{
+
+.testimonial-job {
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 400;
@@ -311,31 +456,39 @@ border: 2px solid $blueColor;
 
 
 
-.img{
+.img {
     width: 295px;
     height: 180px;
     border-radius: 5px;
 }
-.img1{   
-  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project1.png);
+
+.img1 {
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project1.png);
 }
-.img2{
-  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project2.png);
+
+.img2 {
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project2.png);
 }
-.img3{
-  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project3.png);
+
+.img3 {
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project3.png);
 }
-.img4{
-  background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project4.png);
+
+.img4 {
+    background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/project4.png);
 }
-.project-images{
+
+.project-images {
     width: 610px;
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
+    @include max-mq(610px) {
+        justify-content: center;
+      }
 }
-.project-txt
-{
+
+.project-txt {
     width: 398px;
     height: 385px;
     gap: 10px;
@@ -344,78 +497,132 @@ border: 2px solid $blueColor;
     justify-content: space-evenly;
 
 }
-.project{
+
+.project {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin-top: 199px;
+    @include max-mq(430px) {
+        width: 340px;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
-.projects-h5{
+
+.projects-h5 {
     font-family: $primaryFont;
     font-size: 20px;
     font-weight: 400;
     color: $blueColor;
+    @include max-mq(map-get($breakpoints, "md")) {
+        text-align: center;
+      }
 }
-.projects-h3{
+
+.projects-h3 {
     font-family: $primaryFont;
     font-size: 28px;
     font-weight: 700;
+    @include max-mq(map-get($breakpoints, "md")) {
+        text-align: center;
+      }
+
 }
-.projects-p{
+
+.projects-p {
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 400;
+    @include max-mq(map-get($breakpoints, "md")) {
+        text-align: center;
+      }
+
 }
-.projects-button{
+
+.projects-button {
     width: 214px;
     height: 51px;
+    @include max-mq(map-get($breakpoints, "md")) {
+        text-align: center;
+      }
+
 }
 
 
 
 
 
-.team-cards{
+.team-cards {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 30px;
-    
+
 }
-.team-card{
+
+.team-card {
     width: 400px;
     height: 500px;
     border-radius: 5px;
-   gap: 30px;
-   box-shadow: 0px 0px 18px 0px #0000001A;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   justify-content: space-evenly;
+    gap: 30px;
+    box-shadow: 0px 0px 18px 0px #0000001A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    @include max-mq(417px) {
+        width: 350px;
+       }
+       @include max-mq(380px) {
+        width: 340px;
+       }
 }
-.team-card:hover{
+
+.team-card:hover {
     border: 2px solid $blueColor;
 }
-.team1{
+
+.team1 {
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim.png);
     width: 380px;
     height: 250px;
     border-radius: 5px;
+    @include max-mq(417px) {
+        background-size: 330px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
 
 }
-.team2{
+
+.team2 {
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim2.png);
     width: 380px;
     height: 250px;
     border-radius: 5px;
+    @include max-mq(417px) {
+        background-size: 330px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
 }
-.team3{
+
+.team3 {
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim-but-woman.png);
     width: 380px;
     height: 250px;
     border-radius: 5px;
+    @include max-mq(417px) {
+        background-size: 330px;
+        background-repeat: no-repeat;
+        background-position: center;
+       }
+
 }
-.social{
+
+.social {
     width: 250px;
     height: 50px;
     display: flex;
@@ -425,30 +632,36 @@ border: 2px solid $blueColor;
     margin-bottom: 65px;
 
 }
-.social-img{
+
+.social-img {
     width: 50px;
-height: 50px;
+    height: 50px;
 
 }
-.name{
+
+.name {
     width: 185px;
-height: 65px;
-text-align: center;
+    height: 65px;
+    text-align: center;
 
 }
-.name-p{
+
+.name-p {
     font-family: $primaryFont;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-text-align: center;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
 
 }
-.name-h4{
-    font-family:$primaryFont;
-font-size: 24px;
-font-weight: 600;
-line-height: 36px;
-text-align: left;
 
+.name-h4 {
+
+    font-family: $primaryFont;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 36px;
+    text-align: left;
+
+    
 }

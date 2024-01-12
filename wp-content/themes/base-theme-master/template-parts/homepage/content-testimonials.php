@@ -17,7 +17,7 @@
 
             </div>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card tst-2">
             <div class="tst-card-txt">
                 <img src="http://localhost/bocan-zadatak/wp-content/uploads/2024/01/navodnici.png" alt="">
                 <p class=testimonial-txt-p>Nisl rhoncus mattis rhoncus urna neque viverra. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.</p>
@@ -30,7 +30,7 @@
                 
             </div>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card tst-3">
             <div class="tst-card-txt">
                 <img src="http://localhost/bocan-zadatak/wp-content/uploads/2024/01/navodnici.png" alt="">
                 <p class=testimonial-txt-p>Nisl rhoncus mattis rhoncus urna neque viverra. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.</p>

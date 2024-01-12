@@ -5,10 +5,28 @@ for every IT job</h2>
 </div>
 
 
-</div class="services-posts">
+</div class="services-cards">
                 <div class="services-posts-cards">
                     <div class="services-post-card">
-                        <h5 class="services-post-title">Software Development</h5>
+                        <h5 class="services-post-title first-post-title">Software Development</h5>
+                        <p class="services-post-txt">Posuere morbi leo urna molestie at elementum eu egestas.</p>
+                        <a href="url" class="services-post-link">Learn more ></a>
+                    </div>
+
+                    <div class="services-post-card">
+                        <h5 class="services-post-title">AI Programmer & Technical</h5>
+                        <p class="services-post-txt">Posuere morbi leo urna molestie at elementum eu egestas.</p>
+                        <a href="url" class="services-post-link">Learn more ></a>
+                    </div>
+
+                    <div class="services-post-card">
+                        <h5 class="services-post-title">System Application Development</h5>
+                        <p class="services-post-txt">Posuere morbi leo urna molestie at elementum eu egestas.</p>
+                        <a href="url" class="services-post-link">Learn more ></a>
+                    </div>
+
+                    <div class="services-post-card">
+                        <h5 class="services-post-title">Server And Network Solutions</h5>
                         <p class="services-post-txt">Posuere morbi leo urna molestie at elementum eu egestas.</p>
                         <a href="url" class="services-post-link">Learn more ></a>
                     </div>
