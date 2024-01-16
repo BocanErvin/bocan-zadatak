@@ -7,7 +7,7 @@ for every IT job</h2>
 
 </div class="services-cards">
                 <div class="services-posts-cards">
-                    <div class="services-post-card">
+                    <div class="services-post-card service-card-1">
                         <h5 class="services-post-title first-post-title">Software Development</h5>
                         <p class="services-post-txt">Posuere morbi leo urna molestie at elementum eu egestas.</p>
                         <a href="url" class="services-post-link">Learn more ></a>

@@ -1891,11 +1891,11 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 
 .services-post-card {
   text-align: left;
-  border-top: 15px solid #132577;
   border-radius: 5px;
   gap: 10px;
   width: 295px;
   height: 280px;
+  padding-top: 15px;
   padding-left: 30px;
   box-shadow: 0 4px 13px #0000001a;
 }
@@ -1909,6 +1909,10 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 .services-post-card:hover {
   color: #fff;
   background-color: #132577;
+}
+
+.service-card-1 {
+  border-top: 15px solid #132577;
 }
 
 .services-post-title {
@@ -1991,7 +1995,7 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   }
 }
 
-@media (width <= 462px) {
+@media (width <= 502px) {
   .about-background {
     margin-top: 100px;
   }
@@ -2294,12 +2298,20 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   flex-wrap: wrap;
   gap: 20px;
   width: 610px;
+  height: 385px;
   display: flex;
 }
 
 @media (width <= 610px) {
   .project-images {
     justify-content: center;
+    margin-top: 40px;
+  }
+}
+
+@media (width <= 609px) {
+  .project-images {
+    margin-bottom: 450px;
   }
 }
 
@@ -2313,8 +2325,9 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 .project {
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: space-evenly;
+  gap: 80px;
   margin-top: 199px;
   display: flex;
 }
@@ -2390,6 +2403,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   gap: 30px;
   width: 400px;
   height: 500px;
+  margin-bottom: 100px;
+  padding-top: 10px;
   display: flex;
   box-shadow: 0 0 18px #0000001a;
 }

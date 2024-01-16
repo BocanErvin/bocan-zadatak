@@ -90,7 +90,7 @@
     border-radius: 5px;
     gap: 10px;
     padding-left: 30px;
-    border-top: 15px solid $blueColor;
+    padding-top: 15px;
     @include max-mq(map-get($breakpoints, "lg")) {
         margin-top: 20px;
 
@@ -101,6 +101,9 @@
     background-color: $blueColor;
     color: white;
 
+}
+.service-card-1{
+    border-top: 15px solid $blueColor;
 }
 
 .services-post-title {
@@ -183,9 +186,10 @@
         background-repeat: no-repeat;
         background-position: center;
        }
-       @include max-mq(462px) {
-        margin-top:100px;
+       @include max-mq(502px) {
+        margin-top: 100px;
        }
+      
     
 }
 
@@ -243,11 +247,12 @@
     @include max-mq(map-get($breakpoints, "lg")) {
         justify-content: center;
         width: auto;
+        
       }
+     
       
 }
 
-//RAZMAK IZMEDJU DVEJU LISTA MI SE NE SVIDJA
 .list-txt {
     font-family: $primaryFont;
     font-size: 14px;
@@ -480,11 +485,17 @@
 
 .project-images {
     width: 610px;
+    height: 385px;
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
     @include max-mq(610px) {
         justify-content: center;
+        margin-top: 40px;
+   
+      }
+      @include max-mq(609px) {
+        margin-bottom: 450px;
       }
 }
 
@@ -500,8 +511,9 @@
 
 .project {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     justify-content: space-evenly;
+    gap: 80px;
     margin-top: 199px;
     @include max-mq(430px) {
         width: 340px;
@@ -572,6 +584,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    padding-top: 10px;
+    margin-bottom: 100px;
     @include max-mq(417px) {
         width: 350px;
        }
@@ -589,6 +603,7 @@
     width: 380px;
     height: 250px;
     border-radius: 5px;
+
     @include max-mq(417px) {
         background-size: 330px;
         background-repeat: no-repeat;
