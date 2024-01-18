@@ -30,6 +30,10 @@
        @include max-mq(410px) {
         height: auto;
         width: 310px;
+      
+      }
+      @include max-mq(500px) {
+        margin-top: -100px;
      
       }
 
@@ -336,8 +340,8 @@
         transform: rotate(0deg);
         writing-mode: horizontal-tb;
         width: 300px;
-        height: 85px;
-            
+        height: 80px;
+        margin-top: 15px;
           }
    
    
@@ -351,7 +355,10 @@
     font-weight: 500;
     margin-left: 25px;
     justify-content: center;
-    margin-right: 25px;  
+    margin-right: 25px; 
+    margin-top: 25px;
+    margin-bottom: 25px; 
+    
 }
 
 .our-txt {
@@ -636,10 +643,10 @@
     @include max-mq(417px) {
         width: 350px;
         margin-bottom: 20px;
-        
+        padding-top: 5px;
        }
        @include max-mq(380px) {
-        width: 340px;
+        width: 320px;
        }
 }
 
@@ -652,7 +659,7 @@
     border-radius: 5px;
 
     @include max-mq(417px) {
-        background-size: 330px;
+        background-size: 310px;
         background-repeat: no-repeat;
         background-position: center;
        }
@@ -665,7 +672,7 @@
     height: 250px;
     border-radius: 5px;
     @include max-mq(417px) {
-        background-size: 330px;
+        background-size: 310px;
         background-repeat: no-repeat;
         background-position: center;
        }
@@ -677,7 +684,7 @@
     height: 250px;
     border-radius: 5px;
     @include max-mq(417px) {
-        background-size: 330px;
+        background-size: 310px;
         background-repeat: no-repeat;
         background-position: center;
        }
