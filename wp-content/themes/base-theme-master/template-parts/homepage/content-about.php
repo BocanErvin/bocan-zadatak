@@ -1,4 +1,4 @@
-
+<div class="container">
 <div class="about">
         <div class="about-txt">
             <h5 class="section-title-h5">FEW WORDS ABOUT US</h5>
@@ -18,4 +18,5 @@
             </div>
         </div>
     <div class="about-background background"></div>
+</div>
 </div>

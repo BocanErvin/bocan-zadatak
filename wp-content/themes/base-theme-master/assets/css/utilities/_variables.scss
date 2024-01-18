@@ -2,6 +2,8 @@
 * In this file call fonts and set all variables
 **************************************************/
 // Colors:
+
+$blueColor: #132577;
 $main-dark: #000;
 $main-font-color: $main-dark;
 $main-white: #fff;
@@ -9,6 +11,8 @@ $gray: #67696b;
 
 /*Font Variables*/
 $primary-font: serif;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+$primaryFont: 'Poppins', sans-serif;
 
 // Font Weight
 $font-weights: (

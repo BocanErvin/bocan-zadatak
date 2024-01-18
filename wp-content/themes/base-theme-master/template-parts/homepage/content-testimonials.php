@@ -1,3 +1,4 @@
+<div class="container">
 <div class="section-title">
     <h5 class="section-title-h5">TESTIMONIALS</h5>
     <h2 class="section-title-h2">Our Successful Clients</h2>
@@ -43,3 +44,4 @@
             </div>
         </div>
     </div>
+    </div>   

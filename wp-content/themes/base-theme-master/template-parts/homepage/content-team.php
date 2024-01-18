@@ -1,3 +1,4 @@
+<div class="container">
 <div class="section-title">
     <h5 class="section-title-h5">TEAM</h5>
     <h2 class="section-title-h2">Our Certified Experts</h2>
@@ -44,4 +45,5 @@
                 <img class="social-img" src="http://localhost/bocan-zadatak/wp-content/uploads/2024/01/linkedln.png" alt="">
             </div>
         </div>
+    </div>
     </div>

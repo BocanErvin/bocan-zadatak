@@ -2,26 +2,41 @@
 
 .hero-background {
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/banner-background.png);
+    
+   
+}
+.hero-section{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     padding-bottom: 82.22px;
     flex-wrap: wrap-reverse;
-   
+    @include max-mq(589px) {
+        padding-bottom:30px;
+        padding-left: 10px;
+        padding-right: 10px;
+         }
 }
 .hero-txt {
     width: 473px;
     height: 312px;
-    @include max-mq(528px) {
-         width:310px;
-         margin-top: -100px;
-         height: 400px;
+    font-family: $primaryFont;
+    @include max-mq(589px) {
+         height: auto;
+         width: 410px;
+      
        }
+       @include max-mq(410px) {
+        height: auto;
+        width: 310px;
+     
+      }
+
 }
 
 .hero-txt-h2 {
+    font-family: $primaryFont;
     font-size: 28px;
     font-weight: 600;
     line-height: 42px;
@@ -30,6 +45,7 @@
 }
 
 .hero-txt-p {
+    font-family: $primaryFont;
     color: white;
     font-size: 16px;
     font-weight: 400;
@@ -37,7 +53,6 @@
 }
 
 .hero-txt-button {
-
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
@@ -46,25 +61,24 @@
     padding-top: 13px;
     padding-right: 34px;
     padding-left: 33px;
+    font-family: $primaryFont;
 }
 
 .hero-img {
-    width: 534.78px;
-    height: 498.78px;
+    width: 535px;
+    height: 499px;
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/service-icon.png);
-    margin-left: 162.03px;
-    @include max-mq(map-get($breakpoints, "lg")) {
-        margin-left: 0;
-
-    }
-    @include max-mq(528px) {
-        background-size: 330px;
+    @include max-mq(589px) {
+        background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
-        margin-top: -100px;
        }
-
 }
+
+
+
+
+
+
 
 
 .services-cards{
@@ -76,10 +90,11 @@
 
 .services-posts-cards {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
     flex-wrap: wrap;
-
-
+    @include max-mq(1179px) {
+       }
 }
 
 .services-post-card {
@@ -91,17 +106,20 @@
     gap: 10px;
     padding-left: 30px;
     padding-top: 15px;
-    @include max-mq(map-get($breakpoints, "lg")) {
-        margin-top: 20px;
-
+    padding-right: 30px;
+    padding-bottom: 39px;
+    &:hover {
+        background-color: $blueColor;
+        color: white;
+        transition: background-color 0.5s ease;
+        .services-post-link{
+            color: #FFF;
+        }
+    
     }
-}
-
-.services-post-card:hover {
-    background-color: $blueColor;
-    color: white;
 
 }
+
 .service-card-1{
     border-top: 15px solid $blueColor;
 }
@@ -115,8 +133,6 @@
 .first-post-title{
     width:138px;
 }
-
-
 .services-post-txt {
     font-family: $primaryFont;
     width: 187px;
@@ -128,7 +144,6 @@
     letter-spacing: 0em;
     text-align: left;
 }
-
 .services-post-link {
     font-family: $primaryFont;
     width: 89px;
@@ -136,8 +151,8 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 21px;
+    color: $blueColor;
 }
-
 .services-info {
     height: 100px;
     display: flex;
@@ -156,6 +171,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @include max-mq(1199px) {
+        
+       }
+
 }
 
 .info-h5 {
@@ -176,63 +195,79 @@
 
 
 
+
+
+
+
 .about-background {
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/about-us.png);
     width: 582px;
     height: 478px;
-    border-radius: 5px;
-    @include max-mq(610px) {
-        background-size: 330px;
-        background-repeat: no-repeat;
-        background-position: center;
+    border-radius: 5px; 
+    @include max-mq(1199px) {
+        margin-top: 50px;
        }
-       @include max-mq(502px) {
-        margin-top: 100px;
-       }
+       @include max-mq(671px) {
+        background-size: contain;
       
-    
+       }
 }
 
 .about {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 48px;
-    @include max-mq(map-get($breakpoints, "lg")) {
-        margin-top: 140px;
-      }
-      @include max-mq(589px) {
-       margin-top:370px;
-        
-      }
-     
+    @include max-mq(1199px) {
+        justify-content: center;
+        text-align: center;
+        margin-top: 50px;
+       }
+       @include max-mq(589px) {
+         padding-left: 10px;
+         padding-right: 10px;
+         }
+       
 }
 
+.about-txt{
+    width: 610px;
+    height: 354px;
+    display: flex;
+    flex-direction: column;
+    @include max-mq(1199px) {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+       }
+       @include max-mq(589px) {
+        margin-top: 250px;
+        width: 400px;
+        height: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+       }
+}
 .h2-about {
     width: 324.81px;
     height: 84px;
     top: 102px;
-    @include max-mq(map-get($breakpoints, "lg")) {
+    @include max-mq(1199px) {
+        justify-self: center;
         text-align: center;
         width: auto;
-      }
-}
-
-.about-txt {
-    max-width: 610px;
-    height: 354px;
-    @include max-mq(map-get($breakpoints, "lg")) {
-        text-align: center;
-        width: auto;
-      }
-    
-      
-
+       }
 }
 
 .about-txt-p {
     opacity: 60%;
+    max-width: 610px;
+    @include max-mq(620px) {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+        
+       }
 }
 
 .list-about {
@@ -244,13 +279,14 @@
     width: 571.521px;
     margin-top: 30px;
     margin-left: 20px;
-    @include max-mq(map-get($breakpoints, "lg")) {
-        justify-content: center;
+    @include max-mq(589px) {
         width: auto;
-        
-      }
-     
-      
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: -50px;
+        justify-content: center;
+        align-items: center;
+       }
 }
 
 .list-txt {
@@ -258,6 +294,8 @@
     font-size: 14px;
     font-weight: 500;
     line-height: 40px;
+    text-align: left;
+    
 }
 
 
@@ -271,9 +309,14 @@
 
 .our-work-main {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    justify-content: space-between;
+    @include max-mq(1199px) {
+        
+        justify-content: space-evenly;
+       }
 }
+
 
 .our-button {
     border-radius: 5px;
@@ -284,6 +327,11 @@
     writing-mode: tb-rl;
     transform: rotate(-180deg);
     color: $blueColor;
+    &:hover {
+        border: 2px solid $blueColor;
+        transition: border 0.5s ease;
+        
+    }
     @include max-mq(map-get($breakpoints, "lg")) {
         transform: rotate(0deg);
         writing-mode: horizontal-tb;
@@ -294,11 +342,7 @@
    
    
 }
-.our-button-3{
-    @include max-mq(599px) {
-       margin-top: 20px;
-      }
-}
+
 
 .button-txt {
     display: flex;
@@ -307,13 +351,7 @@
     font-weight: 500;
     margin-left: 25px;
     justify-content: center;
-    margin-right: 25px;
-    
-   
-}
-
-.our-button:hover {
-    border: 2px solid $blueColor;
+    margin-right: 25px;  
 }
 
 .our-txt {
@@ -322,16 +360,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    @include max-mq(map-get($breakpoints, "lg")) {
-        width:auto;
-        margin-top:20px;
-        margin-bottom:20px;
-        justify-content: center;
-        text-align: center;
-          }
-        
-         
-    
+    @include max-mq(924px) {
+         justify-content: center;
+         text-align: center;
+         align-items: center;
+         margin-top: 15px;
+         margin-right: 0;
+         margin-bottom: 15px;
+         margin-left: 0;
+    }
+    @include max-mq(589px) {
+        width: auto;
+       }
 }
 
 .ourwork-img {
@@ -348,6 +388,7 @@
       }
       @include max-mq(640px) {
        width: auto;
+       height: auto;
         
       }
 
@@ -373,10 +414,7 @@
     height: 51px;
     color: #FFF;
     background-color: $blueColor;
-    @include max-mq(map-get($breakpoints, "lg")) {
-        align-self: center;
-        justify-self: center;
-      }
+
 }
 
 
@@ -386,33 +424,38 @@
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
+    gap: 20px;
     flex-wrap: wrap;
+    
+    
 }
 
 .testimonial-card {
     width: 400px;
     height: 400px;
-    flex-shrink: 1;
     border-radius: 5px;
     background: #FFF;
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.10);
-    @include max-mq(599px) {
-        width: 300px;
-        margin-bottom:20px;
+    @include max-mq(620px) {
+        margin-left: 10px;
+        margin-right: 10px;
+        width: auto;
+        
        }
     
-}
-.tst-3{
-    @include max-mq(map-get($breakpoints, "lg")) {
-        
-        margin-top:120px;
-      }
+   
 }
 .tst-2{
-    @include max-mq(799px) {
-       margin-top:120px;
-        
-      }
+    @include max-mq(819px) {
+        margin-top: 150px;
+     
+
+       }
+}
+.tst-3{
+    @include max-mq(1199px) {
+        margin-top: 150px;
+       }
 }
 .tst-card-txt {
     z-index: 1;
@@ -421,15 +464,13 @@
     align-items: center;
     text-align: center;
     align-content: space-evenly;
-    gap: 10px;
+    gap: 20px;
     height: 499px;
     padding-top: 60px;
     
-   
 }
-
-.stars {
-    margin-bottom: 30px;
+.stars{
+    margin-bottom: 10px;
 }
 
 .tst-name {
@@ -444,18 +485,22 @@
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 400;
+    width: 272px;
+    height: 84px;
 }
 
 .testimonial-name {
     font-family: $primaryFont;
     font-size: 16px;
     font-weight: 600;
+ 
 }
 
 .testimonial-job {
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 400;
+    margin-top: -15px;
 }
 
 
@@ -485,18 +530,13 @@
 
 .project-images {
     width: 610px;
-    height: 385px;
     gap: 20px;
     display: flex;
     flex-wrap: wrap;
-    @include max-mq(610px) {
+    @include max-mq(609px) {
         justify-content: center;
-        margin-top: 40px;
-   
-      }
-      @include max-mq(609px) {
-        margin-bottom: 450px;
-      }
+        
+       }
 }
 
 .project-txt {
@@ -506,21 +546,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    @include max-mq(1199px) {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap:5px;
+       }
 
 }
 
 .project {
     display: flex;
     flex-wrap: wrap-reverse;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 80px;
     margin-top: 199px;
-    @include max-mq(430px) {
-        width: 340px;
+    @include max-mq(1199px) {
+        text-align: center;
         justify-content: center;
-        align-items: center;
-    }
-
+        
+       }
+       @include max-mq(609px) {
+        justify-content: space-evenly;
+       }
 }
 
 .projects-h5 {
@@ -528,18 +576,12 @@
     font-size: 20px;
     font-weight: 400;
     color: $blueColor;
-    @include max-mq(map-get($breakpoints, "md")) {
-        text-align: center;
-      }
 }
 
 .projects-h3 {
     font-family: $primaryFont;
     font-size: 28px;
     font-weight: 700;
-    @include max-mq(map-get($breakpoints, "md")) {
-        text-align: center;
-      }
 
 }
 
@@ -547,18 +589,12 @@
     font-family: $primaryFont;
     font-size: 14px;
     font-weight: 400;
-    @include max-mq(map-get($breakpoints, "md")) {
-        text-align: center;
-      }
 
 }
 
 .projects-button {
     width: 214px;
     height: 51px;
-    @include max-mq(map-get($breakpoints, "md")) {
-        text-align: center;
-      }
 
 }
 
@@ -568,9 +604,14 @@
 
 .team-cards {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+    @include max-mq(620px) {
+        justify-content: center;
+        gap: 5px;
+        align-items: center;
+       }
 
 }
 
@@ -578,25 +619,31 @@
     width: 400px;
     height: 500px;
     border-radius: 5px;
-    gap: 30px;
+    gap: 20px;
     box-shadow: 0px 0px 18px 0px #0000001A;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-top: 10px;
     margin-bottom: 100px;
+    
+    
+    &:hover {
+        transition: border 0.5s ease;
+        border: 2px solid $blueColor;
+    }
     @include max-mq(417px) {
         width: 350px;
+        margin-bottom: 20px;
+        
        }
        @include max-mq(380px) {
         width: 340px;
        }
 }
 
-.team-card:hover {
-    border: 2px solid $blueColor;
-}
+
 
 .team1 {
     background-image: url(http://localhost/bocan-zadatak/wp-content/uploads/2024/01/sebastian-tim.png);
@@ -658,7 +705,6 @@
     width: 185px;
     height: 65px;
     text-align: center;
-
 }
 
 .name-p {
@@ -667,16 +713,17 @@
     font-weight: 400;
     line-height: 24px;
     text-align: center;
-
+    height: 24px;
+    top: -30px;
+    position: relative;
 }
 
 .name-h4 {
-
     font-family: $primaryFont;
     font-size: 24px;
     font-weight: 600;
     line-height: 36px;
-    text-align: left;
-
-    
+    text-align: center;
+    width: 185px;
+    height: 36px;
 }
