@@ -1,5 +1,50 @@
+<?php
+$service_tagline = get_field("service_tagline");
+$service_title = get_field("service_title");
+?>
 
-<div class="container">
+
+<section class="section-service">
+    <div class="container">
+        <div class="section-service--title">
+            <?php echo $service_tagline  ?>
+            <?php echo $service_title  ?>
+        </div>
+
+        <?php
+        if (have_rows('services')) : while (have_rows('services')) : the_row();
+                $service_description = get_sub_field('service_description');
+                $service_link = get_sub_field('service_link');
+        ?>
+
+                <?php echo $service_description ?>
+
+                <?php if ($service_link) :
+                    $link_url = $service_link['url'];
+                    $link_title = $service_link['title'];
+                    $link_target = $service_link['target'] ? $service_link['target'] : '_self';
+                ?>
+
+                    <a class="section-conditions--conditions-condition-link" target="<?php echo esc_attr($link_target); ?>" href="<?php echo esc_url($link_url); ?>">
+                        <?php echo esc_html($link_title); ?>
+                    </a>
+                <?php endif; ?>
+            <?php endwhile;    ?>
+        <?php endif;  ?>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="container">
     <div class="section-title">
         <h5 class="section-title-h5">SERVICES</h5>
         <h2 class="section-title-h2">We provide All-in-one Solution
@@ -56,4 +101,4 @@
                     </div>
             </div>
         </div>
-</div>
+</div> -->
