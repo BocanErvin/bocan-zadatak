@@ -18,16 +18,16 @@
       }
    },
    "scripts": {
-      "dev": "parcel assets/css/main.scss assets/js/main.js --port 3000 --host localhost --dist-dir ./dist --no-cache",
-      "build": "parcel build assets/css/main.scss assets/js/main.js --dist-dir ./dist --no-cache"
+      "dev": "parcel assets/css/main.scss assets/js/main.js --port 3000 --host localhost --no-cache",
+      "build": "parcel build assets/css/main.scss assets/js/main.js --out-dir ./dist --no-cache"
    },
    "dependencies": {
       "browserslist": "^4.21.7",
-      "sass": "^1.59.3",
       "slick-carousel": "^1.8.1"
    },
    "devDependencies": {
       "@parcel/transformer-sass": "^2.8.3",
-      "parcel": "^2.8.3"
+      "parcel": "^2.8.3",
+      "sass": "^1.70.0"
    }
 }

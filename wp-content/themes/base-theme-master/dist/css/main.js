@@ -117,193 +117,62 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/modules/menu.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var $ = jQuery;
-var _window = $(window);
-var Menu = {
-  $dom: {
-    container: $("#site-navigation"),
-    menu_toggle: $(".menu-toggle"),
-    body: $("body"),
-    menu: undefined,
-    links: undefined,
-    sub_menus: undefined
-  },
-  vars: {
-    activated_screen_resolution: 1199,
-    show_arrows_on_desktop: false
-  },
-  initDom: function initDom() {
-    Menu.$dom.menu = Menu.$dom.container.find("ul").eq(0);
-    Menu.$dom.links = Menu.$dom.menu.find("a");
-    Menu.$dom.sub_menus = Menu.$dom.menu.find("ul");
-  },
-  appendArrows: function appendArrows() {
-    if (_window.width() <= Menu.vars.activated_screen_resolution || Menu.vars.show_arrows_on_desktop) {
-      var items_has_children = Menu.$dom.container.find("li.menu-item-has-children");
-      items_has_children.each(function () {
-        if ($(this).find(".arrow-toggle").length > 0) return;
-        var $parent = this;
-        var $arrow = $("<span class='arrow-toggle'><span class='arrow-toggle--icon'></span></span>");
-        $(this).prepend($arrow);
-        $arrow.on("click", function () {
-          $($parent).toggleClass("expandeds");
-          $($parent).find("> .sub-menu").slideToggle(500);
-        });
-      });
-    } else {
-      $(".arrow-toggle").remove();
-    }
-  },
-  toggleMenu: function toggleMenu() {
-    Menu.$dom.menu_toggle.on("click", function (e) {
-      Menu.$dom.menu_toggle.toggleClass("is-active");
-      Menu.$dom.body.toggleClass("menu-active");
-      Menu.$dom.container.toggleClass("toggled");
-      e.stopPropagation();
-    });
-  },
-  closeMenu: function closeMenu() {
-    if ($(this).attr("href") != "#" && $(this).attr("href") != "") {
-      Menu.$dom.body.removeClass("menu-active");
-      Menu.$dom.menu_toggle.removeClass("is-active");
-      Menu.$dom.container.removeClass("toggled");
-    }
-  },
-  bindScrollResize: function bindScrollResize() {
-    _window.on("resize", function () {
-      Menu.appendArrows();
-    });
-  },
-  bindClicks: function bindClicks() {
-    $(document).on("click", Menu.closeMenu);
-    Menu.$dom.links.on("click", Menu.closeMenu);
-    Menu.toggleMenu();
-    Menu.$dom.container.find("> div").click(function (e) {
-      e.stopPropagation();
-    });
-  },
-  init: function init() {
-    Menu.initDom();
-    Menu.appendArrows();
-    Menu.bindClicks();
-    Menu.bindScrollResize();
+})({"../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
   }
-};
-var _default = exports.default = Menu;
-},{}],"js/modules/theme.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var $ = jQuery;
-var Theme = {
-  dom: {
-    shareLink: $(".share-buttons a"),
-    smoothScrollLinks: $('a[href*="#"]')
-  },
-  /**************************************************
-   * Share links
-   **************************************************/
-  share: function share() {
-    $(".share-buttons a").on("click", function (e) {
-      if (!$(this).hasClass("btn-email")) {
-        e.preventDefault();
-        Theme.PopupCenter($(this).attr("href"), $(this).attr("title"), 500, 300);
-      }
-    });
-  },
-  /**************************************************
-   * Share links popup
-   **************************************************/
-  PopupCenter: function PopupCenter(url, title, w, h) {
-    // Fixes dual-screen position                         Most browsers      Firefox
-    var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;
-    var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;
-    var width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-    var height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-    var left = width / 2 - w / 2 + dualScreenLeft;
-    var top = height / 2 - h / 2 + dualScreenTop;
-    var newWindow = window.open(url, title, "scrollbars=yes, width=" + w + ", height=" + h + ", top=" + top + ", left=" + left);
-
-    // Puts focus on the newWindow
-    if (window.focus) {
-      newWindow.focus();
+  return bundleURL;
+}
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    if (matches) {
+      return getBaseURL(matches[0]);
     }
-  },
-  /**************************************************
-   * Smooth scroll
-   ***************************************************/
-  smooth_scroll: function smooth_scroll() {
-    Theme.dom.smoothScrollLinks
-    // Remove links that don't actually link to anything
-    .not('[href="#"]').not('[href="#0"]').click(function (event) {
-      // On-page links
-      if (location.pathname.replace(/^\//, "") == this.pathname.replace(/^\//, "") && location.hostname == this.hostname) {
-        // Figure out element to scroll to
-        var target = $(this.hash);
-        target = target.length ? target : $("[name=" + this.hash.slice(1) + "]");
-        // Does a scroll target exist?
-        if (target.length) {
-          // Only prevent default if animation is actually gonna happen
-          event.preventDefault();
-          $("html, body").animate({
-            scrollTop: target.offset().top
-          }, 1000, function () {
-            // Callback after animation
-            // Must change focus!
-            var $target = $(target);
-            $target.focus();
-            if ($target.is(":focus")) {
-              // Checking if the target was focused
-              return false;
-            } else {
-              $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
-              $target.focus(); // Set focus again
-            }
-          });
-        }
-      }
-    });
-  },
-  /**************************************************
-  * Fix Height on smaller devices
-  **************************************************/
-  fix_mobile_height: function fix_mobile_height() {
-    var vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-    window.addEventListener('resize', function () {
-      var vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', "".concat(vh, "px"));
-    });
-  },
-  /**************************************************
-   * Initial all theme functions
-   **************************************************/
-  init: function init() {
-    Theme.share();
-    Theme.smooth_scroll();
-    Theme.fix_mobile_height();
   }
-};
-var _default = exports.default = Theme;
-},{}],"js/main.js":[function(require,module,exports) {
-"use strict";
-
-var _menu = _interopRequireDefault(require("./modules/menu"));
-var _theme = _interopRequireDefault(require("./modules/theme"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-_menu.default.init();
-_theme.default.init();
-},{"./modules/menu":"js/modules/menu.js","./modules/theme":"js/modules/theme.js"}],"../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  return '/';
+}
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+function updateLink(link) {
+  var newLink = link.cloneNode();
+  newLink.onload = function () {
+    link.remove();
+  };
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+    cssTimeout = null;
+  }, 50);
+}
+module.exports = reloadCSS;
+},{"./bundle-url":"../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/main.scss":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"./..\\images\\arrow-down.png":[["..\\arrow-down.14fdd563.png","images/arrow-down.png"],"images/arrow-down.png"],"_css_loader":"../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -472,5 +341,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/main.js"], null)
-//# sourceMappingURL=/js/main.js.map
+},{}]},{},["../../../../../../../Users/hp/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/css/main.js.map
